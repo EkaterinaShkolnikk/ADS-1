@@ -6,7 +6,7 @@
 bool checkPrime(uint64_t value) {
   if (value <= 1)
     return false;
-  for (uint64_t i = 2; i * i <= value); i++) {
+  for (uint64_t i = 2; i * i <= value) i++) {
     if (value % i == 0)
       return false;
   }
@@ -16,7 +16,7 @@ bool checkPrime(uint64_t value) {
 uint64_t nPrime(uint64_t n) {
   uint64_t number = 0;
   for (uint64_t i = 2; i <= n; i++) {
-    if (checlPrime(i) == true)
+    if (checkPrime(i) == true)
       number++;
   }
   return number;
@@ -36,7 +36,7 @@ uint64_t nextPrime(uint64_t value) {
 uint64_t sumPrime(uint64_t hbound) {
   uint64_t summ = 0;
   for (uint64_t i = 2; i < hbound; i++) {
-    if (checlPrime(i) == true)
+    if (checkPrime(i) == true)
       summ+=i;
   }
   return summ;
